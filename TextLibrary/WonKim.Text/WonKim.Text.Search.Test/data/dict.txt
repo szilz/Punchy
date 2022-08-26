@@ -1,0 +1,13 @@
+﻿kad3_human
+adenylate kinase 3
+kad3 human
+rbsk_human
+kinase
+rbsk human
+dmd_rat
+dmd rat
+aoc2_human
+aoc2 human
+serb_human
+serb human
+taf1_human
