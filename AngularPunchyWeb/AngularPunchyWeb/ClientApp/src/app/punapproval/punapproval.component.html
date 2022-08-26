@@ -1,0 +1,70 @@
+<br />
+<br />
+<br />
+
+<div class="container">
+  <h1>Pun Submissions</h1>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>setupPhrase</th>
+        <th>responsePhrase</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let submission of punsubmissions">
+        <td><span>{{submission.setupPhrase}}</span></td>
+        <td><span>{{submission.responsePhrase}}</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>Unapproved Puns</h1>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>punSetupRespSubmitID</th>
+        <th>setupPhrase</th>
+        <th>responsePhrase</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pun of unapprovedpuns">
+        <td><span>{{pun.punSetupRespSubmitID}}</span></td>
+        <td><span>{{pun.setupPhrase}}</span></td>
+        <td><span>{{pun.responsePhrase}}</span></td>
+        <td>
+          <span>
+            <button class="approve">
+              <mat-icon>check_circle</mat-icon> approve
+            </button>
+            <div class="space">
+            </div>
+            <button class="reject">
+              <mat-icon>cancel</mat-icon> reject
+            </button>
+            <!-- TODO: ONSELECT of approve or reject button, get the submitID of the submission they want to approve/reject and call api-->
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <h1>Approved Puns</h1>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>setupPhrase</th>
+        <th>responsePhrase</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pun of approvedpuns">
+        <td><span>{{pun.setupPhrase}}</span></td>
+        <td><span>{{pun.responsePhrase}}</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

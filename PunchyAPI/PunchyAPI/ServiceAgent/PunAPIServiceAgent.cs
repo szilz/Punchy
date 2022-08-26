@@ -192,4 +192,13 @@ public class PunAPIServiceAgent
         HttpContent content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
         await _client.PostAsync(_punSubmitApprovalEndpoint, content);
     }
+
+    public async Task<List<PunSetupRespSubmitDto>> GetPunSetupRespSubmit()
+    {
+        var request = new HttpRequestMessage(HttpMethod.Get, _punSubmitEndpoint);
+        var response = await _client.SendAsync(request);
+        var jsonString = await response.Content.ReadAsStringAsync();
+        var respSubmit = JsonConvert.DeserializeObject<List<PunSetupRespSubmitDto>>(jsonString);
+        return respSubmit;
+    }
 }

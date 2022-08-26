@@ -19,7 +19,7 @@ namespace PunchyAPI.Controllers
         // GET api/PunSetupRespSubmit/Type
         // Gets all submit types from the submit table via PunAPI
         [HttpGet("Type")]
-        public async Task<List<SubmitType>> Get()
+        public async Task<List<SubmitType>> GetSubmitTypes()
         {
             List<SubmitType> newSubmit = await punAPIAgent.getSubmitTypes();
             return newSubmit;
@@ -28,9 +28,14 @@ namespace PunchyAPI.Controllers
         // POST api/<PunSetupRespSubmitController>
         // Posts user input (request) pun setup and response to the PunSetupRespSubmit table via PunAPI
         [HttpPost]
-        public async void Post([FromBody] PunSetupRespSubmitRequest request)
+        public async Task Post([FromBody] PunSetupRespSubmitRequest request)
         {
             await punAPIAgent.PostPunSetupRespSubmit(request);
+        }
+        [HttpGet]
+        public async Task<List<PunSetupRespSubmitDto>> Get()
+        {
+            return await punAPIAgent.GetPunSetupRespSubmit();
         }
 
         // POST api/<PunSetupRespSubmitApprovalController>
@@ -49,4 +54,5 @@ namespace PunchyAPI.Controllers
             return newSubmit;
         }
     }
+
 }

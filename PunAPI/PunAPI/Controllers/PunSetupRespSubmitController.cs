@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using PunAPI.Contract;
+using PunAPI.Repositories;
 using System.Data;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,6 +13,14 @@ namespace PunAPI.Controllers
     [ApiController]
     public class PunSetupRespSubmitController : ControllerBase
     {
+        private readonly PunSetupResponseSubmitRepository _repository;
+
+        //Create Constructor with object type ApprovalType to communicate with Repository class
+        public PunSetupRespSubmitController()
+        {
+            _repository = new PunSetupResponseSubmitRepository();
+        }
+
         // POST api/<PunSetupRespSubmitController>
         [HttpPost]
         public async Task PostAsync([FromBody] PunSetupRespSubmitRequest request)
@@ -29,7 +38,14 @@ namespace PunAPI.Controllers
                 }
 
             };
-            
+                    
+        }
+        //GET api/<PunSetupRespSubmitController>
+        [HttpGet]
+        public async Task<List<PunSetupRespSubmitDto>> Get()
+        {
+
+            return await _repository.Get();
         }
     }
 }

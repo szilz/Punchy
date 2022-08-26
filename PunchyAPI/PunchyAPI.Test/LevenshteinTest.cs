@@ -16,31 +16,31 @@ public class LevenshteinTest
     [TestMethod]
     public void LevenDifferenceTest()
     {
-        var diff = leven.Get("kitten", "sitting");
+        var diff = leven.GetDistance("kitten", "sitting");
         Assert.AreEqual(3, diff);
-        var diff2 = leven.Get("Saturday", "Sunday");
+        var diff2 = leven.GetDistance("Saturday", "Sunday");
         Assert.AreEqual(3, diff2);
-        var diff3= leven.Get("Sunday", "Saturday");
+        var diff3= leven.GetDistance("Sunday", "Saturday");
         Assert.AreEqual(3, diff3);
-        var diff4 = leven.Get("kittens", "mittens");
+        var diff4 = leven.GetDistance("kittens", "mittens");
         Assert.AreEqual(1, diff4);
-        var diff5 = leven.Get("fox", "teacup");
+        var diff5 = leven.GetDistance("fox", "teacup");
         Assert.AreEqual(6, diff5);
-        var diff6 = leven.Get("bear", "multidimension");
+        var diff6 = leven.GetDistance("bear", "multidimension");
         Assert.AreEqual(13, diff6);
     }
 
     [TestMethod]
     public void LevenEdgeCaseTest()
     {
-        var empty = leven.Get("", "Alpha");
+        var empty = leven.GetDistance("", "Alpha");
         Assert.AreEqual(5, empty);
-        var emptyDiff = leven.Get("", "");
+        var emptyDiff = leven.GetDistance("", "");
         Assert.AreEqual(-1, emptyDiff);
-        var same = leven.Get("donut", "donut");
+        var same = leven.GetDistance("donut", "donut");
         Assert.AreEqual(0, same);
         string? nil = null;
-        Assert.AreEqual(5, leven.Get(nil, "panda"));
-        Assert.AreEqual(-1, leven.Get(nil, nil));
+        Assert.AreEqual(5, leven.GetDistance(nil, "panda"));
+        Assert.AreEqual(-1, leven.GetDistance(nil, nil));
     }
 }

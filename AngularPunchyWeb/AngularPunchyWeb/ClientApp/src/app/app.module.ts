@@ -11,13 +11,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
+import { PunapprovalComponent } from './punapproval/punapproval.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PunsubmissionComponent,
     NavbarComponent,
-    ChatpageComponent
+    ChatpageComponent,
+    PunapprovalComponent
   ],
   imports: [
     BrowserModule,
