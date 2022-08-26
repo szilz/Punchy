@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+<form [formGroup]="inputForm">
+  <p>
+    <input type="text" id="input" name="input" formControlName="input">
+  </p>
+</form>
+<button type="button" (click)="clickme()">Submit</button>

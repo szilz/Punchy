@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "dd42dd20-9e0d-4b8b-82a3-3357a9757346",
+		"name": "Pun as a Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "KeyWord",
+			"item": [
+				{
+					"name": "GET Keywords",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{env_servername}}:{{env_port}}/api/KeyWord",
+							"protocol": "https",
+							"host": [
+								"{{env_servername}}"
+							],
+							"port": "{{env_port}}",
+							"path": [
+								"api",
+								"KeyWord"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Keyword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{env_servername}}:{{env_port}}/api/KeyWord/54538a33-eb26-44ff-8d4e-401c1ce3a985",
+							"protocol": "https",
+							"host": [
+								"{{env_servername}}"
+							],
+							"port": "{{env_port}}",
+							"path": [
+								"api",
+								"KeyWord",
+								"54538a33-eb26-44ff-8d4e-401c1ce3a985"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

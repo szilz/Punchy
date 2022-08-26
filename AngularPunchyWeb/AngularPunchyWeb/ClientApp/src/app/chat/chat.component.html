@@ -1,0 +1,14 @@
+<ng-container *ngFor="let chat of chatHistory">
+  <div class="messageUser">
+    {{chat.userInput}}
+  </div>
+  <div class="messageUser">
+    {{chat.response}}
+  </div>
+</ng-container>
+<div class="user">
+  <form #chat="ngForm" (ngSubmit)="onSubmit(chat.value)">
+    <input class="input" type="text" name="userInput" placeholder="Talk to punchy here..." ngModel>
+    <button class="button" type="submit">Submit Data</button>
+  </form>
+</div>

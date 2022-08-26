@@ -1,0 +1,16 @@
+Question	Answer	Source	Metadata	SuggestedQuestions	IsContextOnly	Prompts	QnaId
+Hello	Would you like to hear some puns?	Editorial	system_metadata_qna_edited_manually:true	[]	False	[{"DisplayOrder":0,"QnaId":16,"Qna":null,"DisplayText":"Yes"},{"DisplayOrder":1,"QnaId":18,"Qna":null,"DisplayText":"No"}]	14
+Hi	Would you like to hear some puns?	Editorial	system_metadata_qna_edited_manually:true	[]	False	[{"DisplayOrder":0,"QnaId":16,"Qna":null,"DisplayText":"Yes"},{"DisplayOrder":1,"QnaId":18,"Qna":null,"DisplayText":"No"}]	14
+Good Morning	Would you like to hear some puns?	Editorial	system_metadata_qna_edited_manually:true	[]	False	[{"DisplayOrder":0,"QnaId":16,"Qna":null,"DisplayText":"Yes"},{"DisplayOrder":1,"QnaId":18,"Qna":null,"DisplayText":"No"}]	14
+Good Afternoon	Would you like to hear some puns?	Editorial	system_metadata_qna_edited_manually:true	[]	False	[{"DisplayOrder":0,"QnaId":16,"Qna":null,"DisplayText":"Yes"},{"DisplayOrder":1,"QnaId":18,"Qna":null,"DisplayText":"No"}]	14
+Good Evening	Would you like to hear some puns?	Editorial	system_metadata_qna_edited_manually:true	[]	False	[{"DisplayOrder":0,"QnaId":16,"Qna":null,"DisplayText":"Yes"},{"DisplayOrder":1,"QnaId":18,"Qna":null,"DisplayText":"No"}]	14
+Yes	You have a good sense of humor... pick one...	Editorial	system_metadata_qna_edited_manually:true	[]	False	[{"DisplayOrder":0,"QnaId":20,"Qna":null,"DisplayText":"Bad Puns..."},{"DisplayOrder":1,"QnaId":24,"Qna":null,"DisplayText":"What animal is a jerk?"},{"DisplayOrder":2,"QnaId":25,"Qna":null,"DisplayText":"Why are frogs so happy?"},{"DisplayOrder":3,"QnaId":26,"Qna":null,"DisplayText":"My friend's bakery burnt down last night.."}]	16
+No	Too bad pick one....	Editorial	system_metadata_qna_edited_manually:true	[]	False	[{"DisplayOrder":0,"QnaId":19,"Qna":null,"DisplayText":"Bad Puns..."},{"DisplayOrder":1,"QnaId":21,"Qna":null,"DisplayText":"What animal is a jerk?"},{"DisplayOrder":2,"QnaId":22,"Qna":null,"DisplayText":"Why are frogs so happy?"},{"DisplayOrder":3,"QnaId":23,"Qna":null,"DisplayText":"My friend's bakery burnt down last night.."}]	18
+Bad Puns...	It's HOW EYE ROLL..	Editorial		[]	False	[]	19
+Bad Puns...	It's HOW EYE ROLL..	Editorial		[]	False	[]	20
+What animal is a jerk?	A cow...	Editorial		[]	False	[]	21
+Why are frogs so happy?	They eat whatever bugs them!	Editorial		[]	False	[]	22
+My friend's bakery burnt down last night..	Now his business is toast!	Editorial		[]	False	[]	23
+What animal is a jerk?	A cow...	Editorial		[]	False	[]	24
+Why are frogs so happy?	They eat whatever bugs them!	Editorial		[]	False	[]	25
+My friend's bakery burnt down last night..	Now his business is toast!	Editorial		[]	False	[]	26

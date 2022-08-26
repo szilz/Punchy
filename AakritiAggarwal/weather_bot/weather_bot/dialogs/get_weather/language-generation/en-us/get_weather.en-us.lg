@@ -1,0 +1,151 @@
+[import](common.lg)
+
+# SendActivity_6WUv9q()
+[Activity
+    Text = ${SendActivity_6WUv9q_text()}
+]
+
+# SendActivity_6WUv9q_text()
+- Let's check the weather.
+# TextInput_Prompt_xxycBV()
+[Activity
+    Text = ${TextInput_Prompt_xxycBV_text()}
+]
+
+# TextInput_Prompt_xxycBV_text()
+- What's your postal code?
+# TextInput_UnrecognizedPrompt_xxycBV()
+[Activity
+    Text = ${TextInput_UnrecognizedPrompt_xxycBV_text()}
+]
+
+# TextInput_UnrecognizedPrompt_xxycBV_text()
+- Sorry, I do not understand '${this.value}'. Please specify a 5 digit postal code in the format 12345.
+# TextInput_InvalidPrompt_xxycBV()
+[Activity
+    Text = ${TextInput_InvalidPrompt_xxycBV_text()}
+]
+
+# TextInput_InvalidPrompt_xxycBV_text()
+- Sorry, '${this.value}' is not valid. I'm looking for a 5 digit number as postal code. Please specify a 5 digit postal code in the format 12345.
+# SendActivity_kOoCLA()
+[Activity
+    Text = ${SendActivity_kOoCLA_text()}
+    Attachments = ${SendActivity_kOoCLA_attachment_KMom6j()}
+]
+
+# SendActivity_kOoCLA_text()
+- The weather is ${dialog.fahrenheit}F or ${dialog.celsius}C and ${dialog.weather}.
+# SendActivity_m0EwFC()
+[Activity
+    Text = ${SendActivity_m0EwFC_text()}
+]
+
+# SendActivity_m0EwFC_text()
+- Something went wrong: ${dialog.api_response.content.message}.
+# SendActivity_kOoCLA_attachment_KMom6j()
+[ThumbnailCard
+   title = Weather in ${dialog.city} in ${dialog.country}
+   text =  It is "${dialog.weather}" in ${user.postalcode} and the temperature is ${dialog.fahrenheit}&deg;F or ${dialog.celsius}&deg;C. Have a nice day.
+   image = http://openweathermap.org/img/wn/${dialog.icon}@2x.png
+]
+# SendActivity_1Jep7y()
+[Activity
+    Text = ${SendActivity_1Jep7y_text()}
+]
+
+# SendActivity_1Jep7y_text()
+- Weather you like it or not, here come the puns
+# SendActivity_MC1fwE()
+[Activity
+    Text = ${SendActivity_MC1fwE_text()}
+]
+
+# SendActivity_MC1fwE_text()
+- What type of weather does the Queen love the most? Rain
+- Why can bees fly in the rain? They always have on their yellow jackets.
+- Why can precipitation be dangerous? It can be the rain of terror
+# SendActivity_IwocNb()
+[Activity
+    Text = ${SendActivity_IwocNb_text()}
+]
+
+# SendActivity_IwocNb_text()
+- The type of shorts that clouds can wear is thunderwear.
+# SendActivity_9oO8lt()
+[Activity
+    Text = ${SendActivity_9oO8lt_text()}
+]
+
+# SendActivity_9oO8lt_text()
+- The cloud stayed home today because it was feeling under the weather.
+# SendActivity_888alO()
+[Activity
+    Text = ${SendActivity_888alO_text()}
+]
+
+# SendActivity_888alO_text()
+- I mist you
+# ChoiceInput_Prompt_5zhMD0()
+[Activity
+    Text = ${ChoiceInput_Prompt_5zhMD0_text()}
+]
+
+# ChoiceInput_Prompt_5zhMD0_text()
+- What weather do you like?
+# SendActivity_FTQ8Uu()
+[Activity
+    Text = ${SendActivity_FTQ8Uu_text()}
+]
+
+# SendActivity_FTQ8Uu_text()
+- The message from the sun is always enlightening!
+# SendActivity_mIg2Tw()
+[Activity
+    Text = ${SendActivity_mIg2Tw_text()}
+]
+
+# SendActivity_mIg2Tw_text()
+- What is a bear that has been rained on? 
+# SendActivity_0JkggC()
+[Activity
+    Text = ${SendActivity_0JkggC_text()}
+]
+
+# SendActivity_0JkggC_text()
+- A drizzly bear.
+# SendActivity_TeJIjG()
+[Activity
+    Text = ${SendActivity_TeJIjG_text()}
+]
+
+# SendActivity_TeJIjG_text()
+- You can’t weather a tree, but you can climate.
+# SendActivity_Odn67x()
+[Activity
+    Text = ${SendActivity_Odn67x_text()}
+]
+
+# SendActivity_Odn67x_text()
+- What happens when it rains cats and dogs?
+# SendActivity_noMKri()
+[Activity
+    Text = ${SendActivity_noMKri_text()}
+]
+
+# SendActivity_noMKri_text()
+-  You might step in a poodle!
+# SendActivity_bt8SmI()
+[Activity
+    Text = ${SendActivity_bt8SmI_text()}
+]
+
+# SendActivity_bt8SmI_text()
+- Snow-thing can stop me!
+# SendActivity_yGmXQf()
+[Activity
+    Text = ${SendActivity_yGmXQf_text()}
+]
+
+# SendActivity_yGmXQf_text()
+- What do you call the weather bureau? The umbrella organization.

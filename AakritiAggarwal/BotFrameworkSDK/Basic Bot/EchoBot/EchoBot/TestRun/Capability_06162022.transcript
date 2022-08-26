@@ -1,0 +1,304 @@
+[
+  {
+    "type": "conversationUpdate",
+    "membersAdded": [
+      {
+        "id": "f29735b0-edcc-11ec-b2be-e774ee81427b",
+        "name": "Bot"
+      },
+      {
+        "id": "cc27bac6-c528-4d1d-9e2b-2b665e1cd32c",
+        "name": "User"
+      }
+    ],
+    "membersRemoved": [],
+    "channelId": "emulator",
+    "conversation": {
+      "id": "e464a940-edd2-11ec-b2be-e774ee81427b|livechat"
+    },
+    "id": "e46aead0-edd2-11ec-82ab-2b32cc4e8361",
+    "localTimestamp": "2022-06-16T17:17:37-07:00",
+    "recipient": {
+      "id": "f29735b0-edcc-11ec-b2be-e774ee81427b",
+      "name": "Bot",
+      "role": "bot"
+    },
+    "timestamp": "2022-06-17T00:17:37.277Z",
+    "from": {
+      "id": "cc27bac6-c528-4d1d-9e2b-2b665e1cd32c",
+      "name": "User",
+      "role": "user"
+    },
+    "locale": "en-US",
+    "serviceUrl": "http://localhost:59262"
+  },
+  {
+    "type": "message",
+    "serviceUrl": "http://localhost:59262",
+    "channelId": "emulator",
+    "from": {
+      "id": "f29735b0-edcc-11ec-b2be-e774ee81427b",
+      "name": "Bot",
+      "role": "bot"
+    },
+    "conversation": {
+      "id": "e464a940-edd2-11ec-b2be-e774ee81427b|livechat"
+    },
+    "recipient": {
+      "id": "cc27bac6-c528-4d1d-9e2b-2b665e1cd32c",
+      "role": "user"
+    },
+    "locale": "en-US",
+    "text": "Hello and welcome, I am a copy cat with an attitude",
+    "speak": "Hello and welcome, I am a copy cat with an attitude",
+    "inputHint": "acceptingInput",
+    "attachments": [],
+    "entities": [],
+    "replyToId": "e46aead0-edd2-11ec-82ab-2b32cc4e8361",
+    "id": "e46f57a0-edd2-11ec-82ab-2b32cc4e8361",
+    "localTimestamp": "2022-06-16T17:17:37-07:00",
+    "timestamp": "2022-06-17T00:17:37.306Z"
+  },
+  {
+    "channelData": {
+      "clientActivityID": "1655425062225oy3ywjcsi4c",
+      "clientTimestamp": "2022-06-17T00:17:42.225Z"
+    },
+    "text": "Hi",
+    "textFormat": "plain",
+    "type": "message",
+    "channelId": "emulator",
+    "from": {
+      "id": "cc27bac6-c528-4d1d-9e2b-2b665e1cd32c",
+      "name": "User",
+      "role": "user"
+    },
+    "locale": "en-US",
+    "localTimestamp": "2022-06-16T17:17:42-07:00",
+    "localTimezone": "America/Los_Angeles",
+    "timestamp": "2022-06-17T00:17:42.239Z",
+    "entities": [
+      {
+        "requiresBotState": true,
+        "supportsListening": true,
+        "supportsTts": true,
+        "type": "ClientCapabilities"
+      }
+    ],
+    "conversation": {
+      "id": "e464a940-edd2-11ec-b2be-e774ee81427b|livechat"
+    },
+    "id": "e7600ef0-edd2-11ec-82ab-2b32cc4e8361",
+    "recipient": {
+      "id": "f29735b0-edcc-11ec-b2be-e774ee81427b",
+      "name": "Bot",
+      "role": "bot"
+    },
+    "serviceUrl": "http://localhost:59262"
+  },
+  {
+    "type": "message",
+    "serviceUrl": "http://localhost:59262",
+    "channelId": "emulator",
+    "from": {
+      "id": "f29735b0-edcc-11ec-b2be-e774ee81427b",
+      "name": "Bot",
+      "role": "bot"
+    },
+    "conversation": {
+      "id": "e464a940-edd2-11ec-b2be-e774ee81427b|livechat"
+    },
+    "recipient": {
+      "id": "cc27bac6-c528-4d1d-9e2b-2b665e1cd32c",
+      "role": "user"
+    },
+    "locale": "en-US",
+    "text": "Echo: Hi, Ugh you're so basic",
+    "speak": "Echo: Hi, Ugh you're so basic",
+    "inputHint": "acceptingInput",
+    "attachments": [],
+    "entities": [],
+    "replyToId": "e7600ef0-edd2-11ec-82ab-2b32cc4e8361",
+    "id": "e7636a50-edd2-11ec-82ab-2b32cc4e8361",
+    "localTimestamp": "2022-06-16T17:17:42-07:00",
+    "timestamp": "2022-06-17T00:17:42.261Z"
+  },
+  {
+    "channelData": {
+      "clientActivityID": "165542506750531c4pwc8tt6",
+      "clientTimestamp": "2022-06-17T00:17:47.505Z"
+    },
+    "text": "ummmmmm okay?",
+    "textFormat": "plain",
+    "type": "message",
+    "channelId": "emulator",
+    "from": {
+      "id": "cc27bac6-c528-4d1d-9e2b-2b665e1cd32c",
+      "name": "User",
+      "role": "user"
+    },
+    "locale": "en-US",
+    "localTimestamp": "2022-06-16T17:17:47-07:00",
+    "localTimezone": "America/Los_Angeles",
+    "timestamp": "2022-06-17T00:17:47.521Z",
+    "conversation": {
+      "id": "e464a940-edd2-11ec-b2be-e774ee81427b|livechat"
+    },
+    "id": "ea860710-edd2-11ec-82ab-2b32cc4e8361",
+    "recipient": {
+      "id": "f29735b0-edcc-11ec-b2be-e774ee81427b",
+      "name": "Bot",
+      "role": "bot"
+    },
+    "serviceUrl": "http://localhost:59262"
+  },
+  {
+    "type": "message",
+    "serviceUrl": "http://localhost:59262",
+    "channelId": "emulator",
+    "from": {
+      "id": "f29735b0-edcc-11ec-b2be-e774ee81427b",
+      "name": "Bot",
+      "role": "bot"
+    },
+    "conversation": {
+      "id": "e464a940-edd2-11ec-b2be-e774ee81427b|livechat"
+    },
+    "recipient": {
+      "id": "cc27bac6-c528-4d1d-9e2b-2b665e1cd32c",
+      "role": "user"
+    },
+    "locale": "en-US",
+    "text": "Echo: ummmmmm okay?, Ugh your message is so long",
+    "speak": "Echo: ummmmmm okay?, Ugh your message is so long",
+    "inputHint": "acceptingInput",
+    "attachments": [],
+    "entities": [],
+    "replyToId": "ea860710-edd2-11ec-82ab-2b32cc4e8361",
+    "id": "ea89b090-edd2-11ec-82ab-2b32cc4e8361",
+    "localTimestamp": "2022-06-16T17:17:47-07:00",
+    "timestamp": "2022-06-17T00:17:47.545Z"
+  },
+  {
+    "channelData": {
+      "clientActivityID": "16554250744897z1cvd1b57b",
+      "clientTimestamp": "2022-06-17T00:17:54.489Z"
+    },
+    "text": "why are you so mean?",
+    "textFormat": "plain",
+    "type": "message",
+    "channelId": "emulator",
+    "from": {
+      "id": "cc27bac6-c528-4d1d-9e2b-2b665e1cd32c",
+      "name": "User",
+      "role": "user"
+    },
+    "locale": "en-US",
+    "localTimestamp": "2022-06-16T17:17:54-07:00",
+    "localTimezone": "America/Los_Angeles",
+    "timestamp": "2022-06-17T00:17:54.504Z",
+    "conversation": {
+      "id": "e464a940-edd2-11ec-b2be-e774ee81427b|livechat"
+    },
+    "id": "eeaf8c80-edd2-11ec-82ab-2b32cc4e8361",
+    "recipient": {
+      "id": "f29735b0-edcc-11ec-b2be-e774ee81427b",
+      "name": "Bot",
+      "role": "bot"
+    },
+    "serviceUrl": "http://localhost:59262"
+  },
+  {
+    "type": "message",
+    "serviceUrl": "http://localhost:59262",
+    "channelId": "emulator",
+    "from": {
+      "id": "f29735b0-edcc-11ec-b2be-e774ee81427b",
+      "name": "Bot",
+      "role": "bot"
+    },
+    "conversation": {
+      "id": "e464a940-edd2-11ec-b2be-e774ee81427b|livechat"
+    },
+    "recipient": {
+      "id": "cc27bac6-c528-4d1d-9e2b-2b665e1cd32c",
+      "role": "user"
+    },
+    "locale": "en-US",
+    "text": "Wellll",
+    "inputHint": "acceptingInput",
+    "attachments": [
+      {
+        "contentType": "image/gif",
+        "contentUrl": "https://media0.giphy.com/media/3oxRmDVxtFVQWbBxE4/giphy.gif?cid=ecf05e47uz53a559zpp3hf1aczm7bqoui8us86kch9qof6sj&rid=giphy.gif&ct=g",
+        "name": "Resources\\why-not.gif"
+      }
+    ],
+    "entities": [],
+    "replyToId": "eeaf8c80-edd2-11ec-82ab-2b32cc4e8361",
+    "id": "eeb30ef0-edd2-11ec-82ab-2b32cc4e8361",
+    "localTimestamp": "2022-06-16T17:17:54-07:00",
+    "timestamp": "2022-06-17T00:17:54.527Z"
+  },
+  {
+    "channelData": {
+      "clientActivityID": "1655425084185srji11r16jc",
+      "clientTimestamp": "2022-06-17T00:18:04.185Z"
+    },
+    "text": "how are you doing this?",
+    "textFormat": "plain",
+    "type": "message",
+    "channelId": "emulator",
+    "from": {
+      "id": "cc27bac6-c528-4d1d-9e2b-2b665e1cd32c",
+      "name": "User",
+      "role": "user"
+    },
+    "locale": "en-US",
+    "localTimestamp": "2022-06-16T17:18:04-07:00",
+    "localTimezone": "America/Los_Angeles",
+    "timestamp": "2022-06-17T00:18:04.211Z",
+    "conversation": {
+      "id": "e464a940-edd2-11ec-b2be-e774ee81427b|livechat"
+    },
+    "id": "f478b830-edd2-11ec-82ab-2b32cc4e8361",
+    "recipient": {
+      "id": "f29735b0-edcc-11ec-b2be-e774ee81427b",
+      "name": "Bot",
+      "role": "bot"
+    },
+    "serviceUrl": "http://localhost:59262"
+  },
+  {
+    "type": "message",
+    "serviceUrl": "http://localhost:59262",
+    "channelId": "emulator",
+    "from": {
+      "id": "f29735b0-edcc-11ec-b2be-e774ee81427b",
+      "name": "Bot",
+      "role": "bot"
+    },
+    "conversation": {
+      "id": "e464a940-edd2-11ec-b2be-e774ee81427b|livechat"
+    },
+    "recipient": {
+      "id": "cc27bac6-c528-4d1d-9e2b-2b665e1cd32c",
+      "role": "user"
+    },
+    "locale": "en-US",
+    "text": "Here's how its done:",
+    "inputHint": "acceptingInput",
+    "attachments": [
+      {
+        "contentType": "image/png",
+        "contentUrl": "https://docs.microsoft.com/en-us/bot-framework/media/how-it-works/architecture-resize.png",
+        "name": "Resources\\architecture-resize.png"
+      }
+    ],
+    "entities": [],
+    "replyToId": "f478b830-edd2-11ec-82ab-2b32cc4e8361",
+    "id": "f47d7320-edd2-11ec-82ab-2b32cc4e8361",
+    "localTimestamp": "2022-06-16T17:18:04-07:00",
+    "timestamp": "2022-06-17T00:18:04.242Z"
+  }
+]

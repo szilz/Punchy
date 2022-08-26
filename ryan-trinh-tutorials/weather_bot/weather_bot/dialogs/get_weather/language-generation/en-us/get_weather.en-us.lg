@@ -1,0 +1,91 @@
+[import](common.lg)
+
+# SendActivity_uibFxc()
+[Activity
+    Text = ${SendActivity_uibFxc_text()}
+]
+
+# SendActivity_uibFxc_text()
+- Let's check the weather.
+# TextInput_Prompt_HObvRA()
+[Activity
+    Text = ${TextInput_Prompt_HObvRA_text()}
+]
+
+# TextInput_Prompt_HObvRA_text()
+- What's your postal code?
+# TextInput_UnrecognizedPrompt_HObvRA()
+[Activity
+    Text = ${TextInput_UnrecognizedPrompt_HObvRA_text()}
+]
+
+# TextInput_UnrecognizedPrompt_HObvRA_text()
+- Sorry, I do not understand '${this.value}'. Please specify a 5 digit postal code in the format 12345.
+# TextInput_InvalidPrompt_HObvRA()
+[Activity
+    Text = ${TextInput_InvalidPrompt_HObvRA_text()}
+]
+
+# TextInput_InvalidPrompt_HObvRA_text()
+- Sorry, '${this.value}' is not valid. I'm looking for a 5 digit number as postal code. Please specify a 5 digit postal code in the format 12345.
+# SendActivity_COrzsW()
+[Activity
+    Text = ${SendActivity_COrzsW_text()}
+]
+
+# SendActivity_COrzsW_text()
+- Something went wrong: ${dialog.api_response.content.message}.
+# SendActivity_HYWbYz_attachment_20pbiK()
+[ThumbnailCard
+   title = Weather in ${dialog.city} in ${dialog.country}
+   text =  It is "${dialog.weather}" in ${user.postalcode} and the temperature is ${dialog.fahrenheit}&deg;F or ${dialog.celsius}&deg;C. The views up here couldn't be any NYCer. 
+   image = http://openweathermap.org/img/wn/${dialog.icon}@2x.png
+]
+# SendActivity_HYWbYz()
+[Activity
+    Attachments = ${SendActivity_HYWbYz_attachment_20pbiK()}
+]
+
+# SendActivity_CpDe19_attachment_20pbiK()
+[ThumbnailCard
+   title = Weather in ${dialog.city} in ${dialog.country}
+   text =  It is "${dialog.weather}" in ${user.postalcode} and the temperature is ${dialog.fahrenheit}&deg;F or ${dialog.celsius}&deg;C. When the smog clears over LA... UCLA.
+   image = http://openweathermap.org/img/wn/${dialog.icon}@2x.png
+]
+# SendActivity_CpDe19()
+[Activity
+    Attachments = ${SendActivity_CpDe19_attachment_20pbiK()}
+]
+
+# SendActivity_WjWVUr_attachment_20pbiK()
+[ThumbnailCard
+   title = Weather in ${dialog.city} in ${dialog.country}
+   text =  It is "${dialog.weather}" in ${user.postalcode} and the temperature is ${dialog.fahrenheit}&deg;F or ${dialog.celsius}&deg;C. If the city isn't right don't Seattle.
+   image = http://openweathermap.org/img/wn/${dialog.icon}@2x.png
+]
+# SendActivity_WjWVUr()
+[Activity
+    Attachments = ${SendActivity_WjWVUr_attachment_20pbiK()}
+]
+
+# SendActivity_uCIEUX_attachment_20pbiK()
+[ThumbnailCard
+   title = Weather in ${dialog.city} in ${dialog.country}
+   text =  It is "${dialog.weather}" in ${user.postalcode} and the temperature is ${dialog.fahrenheit}&deg;F or ${dialog.celsius}&deg;C. Have a nice day.
+   image = http://openweathermap.org/img/wn/${dialog.icon}@2x.png
+]
+# SendActivity_uCIEUX()
+[Activity
+    Attachments = ${SendActivity_uCIEUX_attachment_20pbiK()}
+]
+
+# SendActivity_kNeWSb_attachment_20pbiK()
+[ThumbnailCard
+   title = Weather in ${dialog.city} in ${dialog.country}
+   text =  It is "${dialog.weather}" in ${user.postalcode} and the temperature is ${dialog.fahrenheit}&deg;F or ${dialog.celsius}&deg;C. An Orange a day keeps Won away. Sorry Won.
+   image = http://openweathermap.org/img/wn/${dialog.icon}@2x.png
+]
+# SendActivity_kNeWSb()
+[Activity
+    Attachments = ${SendActivity_kNeWSb_attachment_20pbiK()}
+]

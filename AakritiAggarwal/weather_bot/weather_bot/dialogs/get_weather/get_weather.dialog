@@ -1,0 +1,322 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "E5A2Sa",
+    "name": "get_weather",
+    "comment": "Get the current weather conditions\n"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "QcaJDA"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "6WUv9q"
+          },
+          "activity": "${SendActivity_6WUv9q()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "HYZwDv"
+          },
+          "property": "user.postalcode",
+          "value": "=@postalcode"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "xxycBV"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_xxycBV()}",
+          "invalidPrompt": "${TextInput_InvalidPrompt_xxycBV()}",
+          "prompt": "${TextInput_Prompt_xxycBV()}",
+          "property": "user.postalcode",
+          "outputFormat": "=trim(this.value)",
+          "validations": [
+            "length(this.value) == 5"
+          ],
+          "defaultValue": "90210"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "kqpF0S"
+          },
+          "resultProperty": "dialog.api_response",
+          "method": "GET",
+          "url": "http://api.openweathermap.org/data/2.5/weather?zip=${user.postalcode},us&appid=fb93df9243e72099994754c8f032c802",
+          "responseType": "json"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "SzpKzt"
+          },
+          "condition": "=dialog.api_response.statusCode == 200",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "lmzzkg"
+              },
+              "assignments": [
+                {
+                  "property": "dialog.weather",
+                  "value": "=dialog.api_response.content.weather[0].description"
+                },
+                {
+                  "property": "dialog.icon",
+                  "value": "=dialog.api_response.content.weather[0].icon"
+                },
+                {
+                  "property": "dialog.city",
+                  "value": "=dialog.api_response.content.name"
+                },
+                {
+                  "property": "dialog.country",
+                  "value": "=dialog.api_response.content.sys.country"
+                },
+                {
+                  "property": "dialog.kelvin",
+                  "value": "=dialog.api_response.content.main.temp"
+                },
+                {
+                  "property": "dialog.celsius",
+                  "value": "=round(dialog.kelvin-273.15)"
+                },
+                {
+                  "property": "dialog.fahrenheit",
+                  "value": "=round((dialog.celsius * 9/5) + 32)"
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "kOoCLA"
+              },
+              "activity": "${SendActivity_kOoCLA()}"
+            },
+            {
+              "$kind": "Microsoft.SwitchCondition",
+              "$designer": {
+                "id": "s0HRkV"
+              },
+              "cases": [
+                {
+                  "value": "moderate rain",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "MC1fwE"
+                      },
+                      "activity": "${SendActivity_MC1fwE()}"
+                    }
+                  ]
+                },
+                {
+                  "value": "thunderstorm",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "IwocNb"
+                      },
+                      "activity": "${SendActivity_IwocNb()}"
+                    }
+                  ]
+                },
+                {
+                  "value": "clear sky",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "9oO8lt"
+                      },
+                      "activity": "${SendActivity_9oO8lt()}"
+                    }
+                  ]
+                },
+                {
+                  "value": "mist",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "888alO"
+                      },
+                      "activity": "${SendActivity_888alO()}"
+                    }
+                  ]
+                }
+              ],
+              "condition": "dialog.weather",
+              "default": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "1Jep7y"
+                  },
+                  "activity": "${SendActivity_1Jep7y()}"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "TeJIjG"
+                  },
+                  "activity": "${SendActivity_TeJIjG()}"
+                }
+              ]
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "m0EwFC"
+              },
+              "activity": "${SendActivity_m0EwFC()}"
+            },
+            {
+              "$kind": "Microsoft.DeleteProperty",
+              "$designer": {
+                "id": "4vph5x"
+              },
+              "property": "user.postalcode"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "5zhMD0"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "prompt": "${ChoiceInput_Prompt_5zhMD0()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "choices": [
+            "Sunny",
+            "Windy",
+            "Snowy",
+            "Rainy"
+          ],
+          "property": "user.favorite",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "defaultValue": "default"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "sQtkS5"
+          },
+          "condition": "user.favorite",
+          "cases": [
+            {
+              "value": "Sunny",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "FTQ8Uu"
+                  },
+                  "activity": "${SendActivity_FTQ8Uu()}"
+                }
+              ]
+            },
+            {
+              "value": "Rainy",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "mIg2Tw"
+                  },
+                  "activity": "${SendActivity_mIg2Tw()}"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "0JkggC"
+                  },
+                  "activity": "${SendActivity_0JkggC()}"
+                }
+              ]
+            },
+            {
+              "value": "Windy",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "Odn67x"
+                  },
+                  "activity": "${SendActivity_Odn67x()}"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "noMKri"
+                  },
+                  "activity": "${SendActivity_noMKri()}"
+                }
+              ]
+            },
+            {
+              "value": "Snowy",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "bt8SmI"
+                  },
+                  "activity": "${SendActivity_bt8SmI()}"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "yGmXQf"
+              },
+              "activity": "${SendActivity_yGmXQf()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "get_weather.lg",
+  "recognizer": "get_weather.lu.qna",
+  "id": "get_weather"
+}

@@ -1,0 +1,10 @@
+<!--Submit a Pun Setup and Response-->
+<div class="punForm" id="punForm">
+  <h3>Submit A Pun!</h3>
+  <form #punSubmit="ngForm" (ngSubmit)="onPunSubmit(punSubmit.value)">
+    <input class="input" type="text" name="userPunSetup" placeholder="Submit a pun setup here..." ngModel>
+    <input class="input" type="text" name="userPunResp" placeholder="Submit a pun response here..." ngModel>
+    <br />
+    <button class="button" type="submit">Submit Pun</button>
+  </form>
+</div>
